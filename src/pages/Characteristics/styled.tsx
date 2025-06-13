@@ -15,16 +15,12 @@ export const HeroSection = styled.section`
     url('src/assets/images/img-banner-cut.png');
   background-size: cover;
   background-position: center;
-  color: white;
-
-  display: flex;
-  align-items: flex-end;
 
   position: relative;
   width: 100%;
   padding: ${({ theme }) => theme.spacing.xl};
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     height: 50vh;
     padding: 2rem 1rem;
   }
@@ -32,13 +28,15 @@ export const HeroSection = styled.section`
 
 // 英雄區塊內容
 export const HeroContent = styled.div`
+  color: ${({ theme }) => theme.colors.text.white};
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-end;
   gap: ${({ theme }) => theme.spacing.xs};
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     max-width: 100%;
     width: 100%;
   }
@@ -49,10 +47,6 @@ export const HeroTitle = styled.h1`
   text-shadow: ${({ theme }) => theme.shadow.text.main};
   font-size: ${({ theme }) => theme.typography.fontSizes['5xl']};
   font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
-
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
 `;
 
 // 英雄區塊 副標題

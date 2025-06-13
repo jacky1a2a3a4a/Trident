@@ -1,8 +1,38 @@
 import styled from 'styled-components';
 
-//元件容器
+//// 頂部導覽列
+export const TopNav = styled.header`
+  background-color: ${({ theme }) => theme.colors.background.white};
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 1000;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+// 頂部導覽列容器
+export const NavContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: ${({ theme }) => theme.spacing.xl};
+  width: 100%;
+  max-width: 765px;
+  margin: 0 2rem;
+`;
+
+//網頁版 側邊攔容器
 export const SidebarContainer = styled.aside`
-  background-color: ${({ theme }) => theme.colors.background.light};
+  background-color: ${({ theme }) => theme.colors.background.white};
 
   position: fixed;
   min-width: 345px;
@@ -11,26 +41,27 @@ export const SidebarContainer = styled.aside`
   top: 0;
 
   padding: 2rem 1.5rem;
-  
+
   overflow-y: auto;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
     display: none;
   }
 `;
 
+//行動版 側邊欄容器
 export const MobileMenuOverlay = styled.div<{ $isOpen: boolean }>`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
     display: ${(props) => (props.$isOpen ? 'block' : 'none')};
     position: fixed;
-    top: 0;
+    top: 80px;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 80px);
     background-color: ${({ theme }) => theme.colors.background.light};
-    z-index: 1000;
+    z-index: 999;
     padding: 2rem 1.5rem;
     overflow-y: auto;
   }
@@ -40,7 +71,6 @@ export const MobileMenuHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
 `;
 
 export const CloseButton = styled.button`
@@ -65,9 +95,9 @@ export const Logo = styled.div`
   padding: ${({ theme }) => theme.spacing.xl};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
 
-  @media (max-width: 768px) {
-    margin-bottom: 2rem;
-    justify-content: flex-start;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
+    padding: 0;
+    margin-bottom: 0;
   }
 `;
 
@@ -79,19 +109,20 @@ export const LogoText = styled.h1`
   line-height: 1.2;
   margin: 0;
 
-  @media (max-width: 768px) {
-    font-size: 1.1rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
+    font-size: ${({ theme }) => theme.typography.fontSizes.xl};
   }
 `;
-
-
 
 //// 導覽列
 export const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing.md};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
+    align-items: flex-start;
+  }
 `;
 
 // 導覽列連結
@@ -101,20 +132,28 @@ export const NavLink = styled.a`
   font-size: ${({ theme }) => theme.typography.fontSizes.xl};
   transition: color 0.2s ease;
   border-bottom: 1px solid transparent;
+  padding: 1rem 0;
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary.hover};
     border-bottom-color: ${({ theme }) => theme.colors.primary.hover};
   }
 
-  @media (max-width: 768px) {
-    padding: 1rem 0;
-    font-size: 1.1rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
+    font-size: ${({ theme }) => theme.typography.fontSizes.lg};
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray[200]};
-
-    &:hover {
-      color: ${({ theme }) => theme.colors.primary.hover};
-      border-bottom-color: ${({ theme }) => theme.colors.primary.hover};
-    }
+    width: 100%;
   }
+`;
+
+export const CircleLogo = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.colors.primary.main};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.colors.text.white};
+  font-weight: bold;
 `;

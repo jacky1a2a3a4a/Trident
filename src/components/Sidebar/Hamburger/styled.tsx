@@ -2,34 +2,29 @@ import styled from 'styled-components';
 
 export const MobileMenuButton = styled.button`
   display: none;
-  position: fixed;
-  top: ${({ theme }) => theme.spacing.md};
-  right: ${({ theme }) => theme.spacing.md};
-  z-index: 999;
-  background: ${({ theme }) => theme.colors.background.white};
-  border: 1px solid ${({ theme }) => theme.colors.border.primary};
-  border-radius: 8px;
-  padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.md};
-  color: ${({ theme }) => theme.colors.text.main};
+  background: none;
+  border: none;
+  padding: 0.5rem;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  font-weight: ${({ theme }) => theme.typography.fontWeights.medium};
+  color: ${({ theme }) => theme.colors.primary.main};
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.primary.main};
-    color: ${({ theme }) => theme.colors.text.white};
+  @media (min-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
+    display: none;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &:hover {
+    opacity: 0.7;
   }
 `;
 
 export const HamburgerIcon = styled.div`
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,5 +35,6 @@ export const HamburgerIcon = styled.div`
     width: 100%;
     background-color: currentColor;
     border-radius: 1px;
+    transition: transform 0.3s ease;
   }
 `;

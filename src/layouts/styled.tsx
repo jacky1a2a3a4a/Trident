@@ -13,7 +13,7 @@ export const Main = styled.main`
   height: 100vh;
   overflow-y: auto;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
     margin-left: 0;
     width: 100%;
   }

@@ -79,7 +79,9 @@ export const theme = {
 
   /* 斷點 */
   breakpoints: {
-    mobile: '1024px',
+    mobileSm: '375px',
+    mobileMd: '765px',
+    mobileLg: '1024px',
     tablet: '1440px',
     desktop: '1920px',
   },
