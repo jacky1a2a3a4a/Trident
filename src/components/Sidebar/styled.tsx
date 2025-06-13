@@ -10,7 +10,10 @@ export const SidebarWrapper = styled.div`
   .mobile-sidebar {
     display: none;
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   }
 `;

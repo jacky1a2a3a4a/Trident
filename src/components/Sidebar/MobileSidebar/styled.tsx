@@ -1,52 +1,34 @@
 import styled from 'styled-components';
 
+//// 外層容器
 export const TopNav = styled.header`
-  background-color: ${({ theme }) => theme.colors.background.white};
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  z-index: 1000;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: ${({ theme }) => theme.colors.background.white};
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 1000;
+
+    padding: 0 1rem;
   }
 `;
 
+// 頂部導航
 export const NavContainer = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: ${({ theme }) => theme.spacing.xl};
   position: relative;
   width: 100%;
   max-width: 765px;
   margin: 0 2rem;
-`;
-
-export const MobileMenuOverlay = styled.div<{ $isOpen: boolean }>`
-  background-color: ${({ theme }) => theme.colors.background.white};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  top: 80px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  max-height: ${({ $isOpen }) => ($isOpen ? 'auto' : '0')};
-  z-index: 999;
-  padding-bottom: ${({ $isOpen, theme }) => ($isOpen ? theme.spacing.xl : '0')};
-  overflow-y: auto;
-  opacity: ${({ $isOpen }) => ($isOpen ? '1' : '0')};
-  visibility: ${({ $isOpen }) => ($isOpen ? 'visible' : 'hidden')};
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
 export const Logo = styled.div`
@@ -79,4 +61,27 @@ export const CircleLogo = styled.div`
   justify-content: center;
   color: ${({ theme }) => theme.colors.text.white};
   font-weight: bold;
+`;
+
+// 下拉選單
+export const MobileMenuOverlay = styled.div<{ $isOpen: boolean }>`
+  background-color: ${({ theme }) => theme.colors.background.white};
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-height: ${({ $isOpen }) => ($isOpen ? 'auto' : '0')};
+  z-index: 999;
+  padding-bottom: ${({ $isOpen, theme }) => ($isOpen ? theme.spacing.xl : '0')};
+  overflow-y: auto;
+  opacity: ${({ $isOpen }) => ($isOpen ? '1' : '0')};
+  visibility: ${({ $isOpen }) => ($isOpen ? 'visible' : 'hidden')};
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;

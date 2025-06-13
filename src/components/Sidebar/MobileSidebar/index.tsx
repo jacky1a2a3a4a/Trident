@@ -2,12 +2,12 @@ import {
   TopNav,
   NavContainer,
   MobileMenuOverlay,
-  Logo,
+  Logo as LogoWrapper,
   LogoText,
-  CircleLogo,
 } from './styled';
 import Hamburger from './Hamburger';
 import NavLinks from '../NavLinks';
+import Logo from '../../Logo';
 
 type MobileSidebarProps = {
   isMobileMenuOpen: boolean;
@@ -20,14 +20,16 @@ const MobileSidebar = ({
 }: MobileSidebarProps) => {
   return (
     <TopNav className="mobile-sidebar">
+      {/* Header */}
       <NavContainer>
         <Hamburger onClick={onToggleMobileMenu} isOpen={isMobileMenuOpen} />
-        <Logo>
+        <LogoWrapper>
           <LogoText>白頭翁不吃小米</LogoText>
-        </Logo>
-        <CircleLogo>白</CircleLogo>
+        </LogoWrapper>
+        <Logo />
       </NavContainer>
 
+      {/* Menu */}
       <MobileMenuOverlay $isOpen={isMobileMenuOpen}>
         <NavLinks />
       </MobileMenuOverlay>

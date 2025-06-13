@@ -1,13 +1,14 @@
 import { LogoContainer, Bird } from './styled';
 
-type LogoProps = {
-  className?: string;
-};
-
-const Logo = ({ className }: LogoProps) => {
+const Logo = () => {
   return (
-    <LogoContainer className={className}>
-      <Bird />
+    <LogoContainer>
+      <Bird>
+        <span className="head" />
+        <span className="eye" />
+        <span className="beak" />
+        <span className="chin" />
+      </Bird>
     </LogoContainer>
   );
 };
