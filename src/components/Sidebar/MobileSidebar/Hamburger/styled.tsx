@@ -22,12 +22,14 @@ export const MobileMenuButton = styled.button`
   }
 `;
 
-export const HamburgerIcon = styled.div`
+export const HamburgerIcon = styled.div<{ $isOpen: boolean }>`
   width: 24px;
   height: 24px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 
   span {
     display: block;
@@ -35,6 +37,22 @@ export const HamburgerIcon = styled.div`
     width: 100%;
     background-color: currentColor;
     border-radius: 1px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    position: absolute;
+
+    &:first-child {
+      transform: ${({ $isOpen }) =>
+        $isOpen ? 'rotate(45deg)' : 'translateY(-8px)'};
+    }
+
+    &:nth-child(2) {
+      opacity: ${({ $isOpen }) => ($isOpen ? '0' : '1')};
+      transform: none;
+    }
+
+    &:last-child {
+      transform: ${({ $isOpen }) =>
+        $isOpen ? 'rotate(-45deg)' : 'translateY(8px)'};
+    }
   }
 `;

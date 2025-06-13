@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 3fr 2fr;
+  grid-template-rows: 2fr 1fr;
   width: 100%;
   height: 100vh;
 `;
@@ -45,6 +45,8 @@ export const HeroTitle = styled.h1`
   font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
   text-align: right;
   width: 100%;
+  line-height: 1.2;
+  margin-bottom: ${({ theme }) => theme.spacing.sm};
 `;
 
 // 英雄區塊 副標題

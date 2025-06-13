@@ -11,15 +11,10 @@ const Layout = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-
   return (
     <Container>
       <Sidebar
         isMobileMenuOpen={isMobileMenuOpen}
-        onCloseMobileMenu={closeMobileMenu}
         onToggleMobileMenu={toggleMobileMenu}
       />
 
