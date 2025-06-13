@@ -9,9 +9,15 @@ export const StyledInfoCard = styled.div`
   gap: ${({ theme }) => theme.spacing.xl};
 
   padding: ${({ theme }) => theme.spacing.xl};
+  max-width: 345px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: ${({ theme }) => theme.spacing.md};
+    gap: ${({ theme }) => theme.spacing.lg};
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding: ${({ theme }) => theme.spacing.lg};
+    padding: ${({ theme }) => theme.spacing.md};
   }
 `;
 
