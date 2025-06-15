@@ -1,54 +1,18 @@
-# React + TypeScript + Vite
+# Trident 白頭翁不吃小米
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+這是一個使用現代前端技術建立的專案。
+網站內容介紹白頭翁鳥類的基本生態。
 
-Currently, two official plugins are available:
+## 使用技術
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://react.dev/) - 用於構建用戶界面的 JavaScript 庫
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript 的超集，提供靜態類型檢查
+- [Vite](https://vitejs.dev/) - 下一代前端構建工具
+- [pnpm](https://pnpm.io/) - 快速、節省空間的套件管理器
 
-## Expanding the ESLint configuration
+## 專案內容
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- 使用 React 18+ 和 TypeScript 開發
+- 採用 Vite 作為構建工具，提供快速的開發體驗
+- 使用 ESLint 和 TypeScript 進行代碼品質控制
+- 支援 Fast Refresh 功能，提供即時的開發反饋
