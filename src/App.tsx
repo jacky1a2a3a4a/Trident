@@ -1,11 +1,11 @@
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import AppRoutes from 'src/routes';
 
 function App() {
   return (
-    <BrowserRouter basename="/trident">
+    <HashRouter>
       <AppRoutes />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
