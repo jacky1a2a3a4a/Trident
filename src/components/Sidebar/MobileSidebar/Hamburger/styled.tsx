@@ -32,10 +32,10 @@ export const HamburgerIcon = styled.div<{ $isOpen: boolean }>`
   align-items: center;
 
   span {
+    background-color: ${({ theme }) => theme.colors.primary.main};
     display: block;
     height: 2px;
     width: 100%;
-    background-color: currentColor;
     border-radius: 1px;
     transition: all 0.3s ease;
     position: absolute;

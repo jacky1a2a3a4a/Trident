@@ -1,10 +1,4 @@
-import {
-  TopNav,
-  NavContainer,
-  MobileMenuOverlay,
-  Logo as LogoWrapper,
-  LogoText,
-} from './styled';
+import { TopNav, NavContainer, MobileMenuOverlay, LogoText } from './styled';
 import Hamburger from './Hamburger';
 import NavLinks from '../NavLinks';
 import Logo from '../../Logo';
@@ -23,15 +17,15 @@ const MobileSidebar = ({
       {/* Header */}
       <NavContainer>
         <Hamburger onClick={onToggleMobileMenu} isOpen={isMobileMenuOpen} />
-        <LogoWrapper>
+        <a href="/">
           <LogoText>白頭翁不吃小米</LogoText>
-        </LogoWrapper>
+        </a>
         <Logo />
       </NavContainer>
 
       {/* Menu */}
       <MobileMenuOverlay $isOpen={isMobileMenuOpen}>
-        <NavLinks />
+        <NavLinks onLinkClick={onToggleMobileMenu} />
       </MobileMenuOverlay>
     </TopNav>
   );

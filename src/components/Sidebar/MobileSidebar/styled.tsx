@@ -50,17 +50,6 @@ export const LogoText = styled.h1`
   margin: 0;
 `;
 
-export const CircleLogo = styled.div`
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: ${({ theme }) => theme.colors.primary.main};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${({ theme }) => theme.colors.text.white};
-  font-weight: bold;
-`;
 
 // 下拉選單
 export const MobileMenuOverlay = styled.div<{ $isOpen: boolean }>`
@@ -79,7 +68,6 @@ export const MobileMenuOverlay = styled.div<{ $isOpen: boolean }>`
   z-index: 999;
   padding-bottom: ${({ $isOpen, theme }) => ($isOpen ? theme.spacing.xl : '0')};
   overflow-y: auto;
-  opacity: ${({ $isOpen }) => ($isOpen ? '1' : '0')};
   visibility: ${({ $isOpen }) => ($isOpen ? 'visible' : 'hidden')};
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

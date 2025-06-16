@@ -31,6 +31,10 @@ export const LogoText = styled.h1`
   color: ${({ theme }) => theme.colors.primary.main};
   font-size: ${({ theme }) => theme.typography.fontSizes['3xl']};
   font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary.hover};
+  }
 `;
 
 // 固定logo容器

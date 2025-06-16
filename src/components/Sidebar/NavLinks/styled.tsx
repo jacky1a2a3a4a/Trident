@@ -9,13 +9,20 @@ export const Nav = styled.nav`
 `;
 
 // 連結
-export const NavLink = styled.a`
+export const StyledNavLink = styled.a`
   color: ${({ theme }) => theme.colors.primary.main};
   font-size: ${({ theme }) => theme.typography.fontSizes.xl};
   transition: color 0.3s ease;
-  
+  text-decoration: none;
+
   &:hover {
     color: ${({ theme }) => theme.colors.primary.hover};
     border-bottom: 1px solid ${({ theme }) => theme.colors.primary.hover};
+  }
+
+  &.active {
+    color: ${({ theme }) => theme.colors.primary.hover};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.primary.hover};
+    font-weight: bold;
   }
 `;

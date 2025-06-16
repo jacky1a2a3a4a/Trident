@@ -11,7 +11,9 @@ const DesktopSidebar = () => {
   return (
     <SidebarContainer className="desktop-sidebar">
       <LogoWrapper>
-        <LogoText>白頭翁不吃小米</LogoText>
+        <a href="/">
+          <LogoText>白頭翁不吃小米</LogoText>
+        </a>
         <FixedWrapper>
           <Logo size={90} />
         </FixedWrapper>

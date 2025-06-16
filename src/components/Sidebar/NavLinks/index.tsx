@@ -1,13 +1,25 @@
-import { Nav } from './styled';
+import { Nav, StyledNavLink } from './styled';
 import { NavLink } from 'react-router-dom';
 
-const NavLinks = () => {
+type NavLinksProps = {
+  onLinkClick?: () => void;
+};
+
+const NavLinks = ({ onLinkClick }: NavLinksProps) => {
   return (
     <Nav>
-      <NavLink to="/characteristics">白頭翁的特性</NavLink>
-      <NavLink to="/story">白頭翁的故事</NavLink>
-      <NavLink to="/gallery">白頭翁的美照</NavLink>
-      <NavLink to="/conservation">白頭翁的危機</NavLink>
+      <StyledNavLink as={NavLink} to="/characteristics" onClick={onLinkClick}>
+        白頭翁的特性
+      </StyledNavLink>
+      <StyledNavLink as={NavLink} to="/story" onClick={onLinkClick}>
+        白頭翁的故事
+      </StyledNavLink>
+      <StyledNavLink as={NavLink} to="/gallery" onClick={onLinkClick}>
+        白頭翁的美照
+      </StyledNavLink>
+      <StyledNavLink as={NavLink} to="/conservation" onClick={onLinkClick}>
+        白頭翁的危機
+      </StyledNavLink>
     </Nav>
   );
 };
