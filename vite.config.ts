@@ -8,7 +8,7 @@ const __dirname = dirname(__filename);
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Trident/',
+  base: process.env.NODE_ENV === 'production' ? '/Trident/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
