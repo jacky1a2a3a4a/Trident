@@ -16,7 +16,7 @@ export const StyledInfoCard = styled.div`
     gap: ${({ theme }) => theme.spacing.lg};
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
     padding: ${({ theme }) => theme.spacing.md};
   }
 `;
