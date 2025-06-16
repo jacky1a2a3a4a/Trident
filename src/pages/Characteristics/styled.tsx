@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import bannerImage from 'src/assets/images/img-banner-cut.png';
 
 //// 元件容器
 export const Container = styled.section`
@@ -18,7 +19,7 @@ export const Container = styled.section`
 //// 英雄區塊
 export const HeroSection = styled.section`
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
-    url('src/assets/images/img-banner-cut.png');
+    url(${bannerImage});
   background-size: cover;
   background-position: center;
 
