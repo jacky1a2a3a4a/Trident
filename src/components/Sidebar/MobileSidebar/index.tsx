@@ -2,6 +2,8 @@ import { TopNav, NavContainer, MobileMenuOverlay, LogoText } from './styled';
 import Hamburger from './Hamburger';
 import NavLinks from '../NavLinks';
 import Logo from '../../Logo';
+import { StyledNavLink } from '../NavLinks/styled';
+import { NavLink } from 'react-router-dom';
 
 type MobileSidebarProps = {
   isMobileMenuOpen: boolean;
@@ -17,9 +19,9 @@ const MobileSidebar = ({
       {/* Header */}
       <NavContainer>
         <Hamburger onClick={onToggleMobileMenu} isOpen={isMobileMenuOpen} />
-        <a href="/">
+        <StyledNavLink as={NavLink} to="/">
           <LogoText>白頭翁不吃小米</LogoText>
-        </a>
+        </StyledNavLink>
         <Logo />
       </NavContainer>
 
