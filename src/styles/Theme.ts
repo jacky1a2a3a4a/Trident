@@ -3,8 +3,9 @@ export const theme = {
   colors: {
     /* 主色系 */
     primary: {
-      main: '#2d5016',
+      main: '#000000',
       hover: '#AA666699',
+      // main: '#2d5016',
       // hover: '#5a8a2a',
     },
 
@@ -78,9 +79,11 @@ export const theme = {
 
   /* 斷點 */
   breakpoints: {
-    mobile: '768px',
-    tablet: '1024px',
-    desktop: '1280px',
+    mobileSm: '375px',
+    mobileMd: '765px',
+    mobileLg: '1024px',
+    tablet: '1440px',
+    desktop: '1920px',
   },
 
   shadow: {

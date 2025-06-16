@@ -2,12 +2,13 @@ import { MobileMenuButton, HamburgerIcon } from './styled';
 
 type HamburgerProps = {
   onClick: () => void;
+  isOpen: boolean;
 };
 
-const Hamburger = ({ onClick }: HamburgerProps) => {
+const Hamburger = ({ onClick, isOpen }: HamburgerProps) => {
   return (
     <MobileMenuButton onClick={onClick}>
-      <HamburgerIcon>
+      <HamburgerIcon $isOpen={isOpen}>
         <span></span>
         <span></span>
         <span></span>
