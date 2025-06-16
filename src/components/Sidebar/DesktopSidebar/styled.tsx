@@ -29,13 +29,13 @@ export const LogoWrapper = styled.div`
 // 文字
 export const LogoText = styled.h1`
   color: ${({ theme }) => theme.colors.primary.main};
-  font-size: ${({ theme }) => theme.typography.fontSizes['2xl']};
+  font-size: ${({ theme }) => theme.typography.fontSizes['3xl']};
   font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
 `;
 
 // 固定logo容器
 export const FixedWrapper = styled.div`
   position: fixed;
-  top: 35px;
+  top: 40px;
   left: 300px;
 `;
