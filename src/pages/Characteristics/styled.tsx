@@ -7,6 +7,12 @@ export const Container = styled.section`
   grid-template-rows: 2fr 1fr;
   width: 100%;
   height: 100vh;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 //// 英雄區塊
@@ -21,7 +27,7 @@ export const HeroSection = styled.section`
   padding: ${({ theme }) => theme.spacing.xl};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
-    height: 50vh;
+    height: 380px;
     padding: 2rem 1rem;
   }
 `;

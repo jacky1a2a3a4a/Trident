@@ -15,7 +15,7 @@ export const TopNav = styled.header`
     height: 80px;
     z-index: 1000;
 
-    padding: 0 1rem;
+    padding: 0 ${({ theme }) => theme.spacing.xl};
   }
 `;
 
@@ -28,7 +28,6 @@ export const NavContainer = styled.div`
   position: relative;
   width: 100%;
   max-width: 765px;
-  margin: 0 2rem;
 `;
 
 export const Logo = styled.div`
