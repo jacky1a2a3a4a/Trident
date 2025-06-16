@@ -3,7 +3,7 @@ import AppRoutes from 'src/routes';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Trident">
       <AppRoutes />
     </BrowserRouter>
   );
