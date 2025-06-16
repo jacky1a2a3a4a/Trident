@@ -432,7 +432,7 @@ Please change the parent <Route path="${Y}"> to <Route path="${Y==="/"?"*":`${Y}
       transform: ${({$isOpen:n})=>n?"rotate(-45deg)":"translateY(8px)"};
     }
   }
-`,B1=({onClick:n,isOpen:c})=>L.jsx(H1,{onClick:n,children:L.jsxs(j1,{$isOpen:c,children:[L.jsx("span",{}),L.jsx("span",{}),L.jsx("span",{})]})}),q1=({isMobileMenuOpen:n,onToggleMobileMenu:c})=>L.jsxs(C1,{className:"mobile-sidebar",children:[L.jsxs(N1,{children:[L.jsx(B1,{onClick:c,isOpen:n}),L.jsx("a",{href:"/",children:L.jsx(U1,{children:"白頭翁不吃小米"})}),L.jsx(fm,{})]}),L.jsx(w1,{$isOpen:n,children:L.jsx(rm,{onLinkClick:c})})]}),Y1=({isMobileMenuOpen:n,onToggleMobileMenu:c})=>L.jsxs(x1,{children:[L.jsx(M1,{}),L.jsx(q1,{isMobileMenuOpen:n,onToggleMobileMenu:c})]}),L1=()=>{const[n,c]=U.useState(!1),f=()=>{c(!n)};return L.jsxs(L.Fragment,{children:[L.jsx(Z0,{}),L.jsxs(b1,{children:[L.jsx(S1,{children:L.jsx(Y1,{isMobileMenuOpen:n,onToggleMobileMenu:f})}),L.jsx(E1,{children:L.jsx(qg,{})})]})]})},G1=pt.section`
+`,B1=({onClick:n,isOpen:c})=>L.jsx(H1,{onClick:n,children:L.jsxs(j1,{$isOpen:c,children:[L.jsx("span",{}),L.jsx("span",{}),L.jsx("span",{})]})}),q1=({isMobileMenuOpen:n,onToggleMobileMenu:c})=>L.jsxs(C1,{className:"mobile-sidebar",children:[L.jsxs(N1,{children:[L.jsx(B1,{onClick:c,isOpen:n}),L.jsx("a",{href:"/",children:L.jsx(U1,{children:"白頭翁不吃小米"})}),L.jsx(fm,{})]}),L.jsx(w1,{$isOpen:n,children:L.jsx(rm,{onLinkClick:c})})]}),Y1=({isMobileMenuOpen:n,onToggleMobileMenu:c})=>L.jsxs(x1,{children:[L.jsx(M1,{}),L.jsx(q1,{isMobileMenuOpen:n,onToggleMobileMenu:c})]}),L1=()=>{const[n,c]=U.useState(!1),f=()=>{c(!n)};return L.jsxs(L.Fragment,{children:[L.jsx(Z0,{}),L.jsxs(b1,{children:[L.jsx(S1,{children:L.jsx(Y1,{isMobileMenuOpen:n,onToggleMobileMenu:f})}),L.jsx(E1,{children:L.jsx(qg,{})})]})]})},G1="/trident/assets/img-banner-cut-DYzgjTcu.png",X1=pt.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 1fr;
@@ -444,9 +444,9 @@ Please change the parent <Route path="${Y}"> to <Route path="${Y==="/"?"*":`${Y}
     display: flex;
     flex-direction: column;
   }
-`,X1=pt.section`
+`,Q1=pt.section`
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
-    url('src/assets/images/img-banner-cut.png');
+    url(${G1});
   background-size: cover;
   background-position: center;
 
@@ -458,7 +458,7 @@ Please change the parent <Route path="${Y}"> to <Route path="${Y==="/"?"*":`${Y}
     height: 380px;
     padding: 2rem 1rem;
   }
-`,Q1=pt.div`
+`,Z1=pt.div`
   color: ${({theme:n})=>n.colors.text.white};
   display: flex;
   flex-direction: column;
@@ -467,7 +467,7 @@ Please change the parent <Route path="${Y}"> to <Route path="${Y==="/"?"*":`${Y}
   gap: ${({theme:n})=>n.spacing.xs};
   width: 100%;
   height: 100%;
-`,Z1=pt.h1`
+`,V1=pt.h1`
   text-shadow: ${({theme:n})=>n.shadow.text.main};
   font-size: ${({theme:n})=>n.typography.fontSizes["5xl"]};
   font-weight: ${({theme:n})=>n.typography.fontWeights.bold};
@@ -475,7 +475,7 @@ Please change the parent <Route path="${Y}"> to <Route path="${Y==="/"?"*":`${Y}
   width: 100%;
   line-height: 1.2;
   margin-bottom: ${({theme:n})=>n.spacing.sm};
-`,V1=pt.p`
+`,K1=pt.p`
   text-shadow: ${({theme:n})=>n.shadow.text.main};
   font-size: ${({theme:n})=>n.typography.fontSizes.lg};
   line-height: 1.6;
@@ -485,7 +485,7 @@ Please change the parent <Route path="${Y}"> to <Route path="${Y==="/"?"*":`${Y}
   @media (max-width: 768px) {
     font-size: 1rem;
   }
-`,K1=pt.section`
+`,$1=pt.section`
   display: flex;
   justify-content: center;
   padding: ${({theme:n})=>n.spacing.xl};
@@ -493,7 +493,7 @@ Please change the parent <Route path="${Y}"> to <Route path="${Y==="/"?"*":`${Y}
   @media (max-width: 768px) {
     padding: 2rem 1rem;
   }
-`,$1=pt.div`
+`,J1=pt.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   max-width: 1200px;
@@ -506,7 +506,7 @@ Please change the parent <Route path="${Y}"> to <Route path="${Y==="/"?"*":`${Y}
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-`,J1=pt.div`
+`,k1=pt.div`
   background-color: transparent;
   display: flex;
   align-items: flex-start;
@@ -524,7 +524,7 @@ Please change the parent <Route path="${Y}"> to <Route path="${Y==="/"?"*":`${Y}
   @media (max-width: ${({theme:n})=>n.breakpoints.mobileLg}) {
     padding: ${({theme:n})=>n.spacing.md};
   }
-`,k1=pt.p`
+`,W1=pt.p`
   color: ${({theme:n})=>n.colors.primary.main};
   font-size: ${({theme:n})=>n.typography.fontSizes["3xl"]};
   font-weight: ${({theme:n})=>n.typography.fontWeights.bold};
@@ -544,10 +544,10 @@ Please change the parent <Route path="${Y}"> to <Route path="${Y==="/"?"*":`${Y}
     border: 8px solid rgba(170, 102, 102, 0.6);
     border-radius: 50%;
   }
-`,W1=pt.p`
+`,F1=pt.p`
   color: ${({theme:n})=>n.colors.gray[600]};
   font-size: ${({theme:n})=>n.typography.fontSizes.sm};
   line-height: 1.6;
   text-align: justify;
   text-justify: inter-word;
-`,Of=({title:n,text:c})=>L.jsxs(J1,{children:[L.jsx(k1,{children:n}),L.jsx(W1,{children:c})]});function p0(){return L.jsxs(G1,{children:[L.jsx(X1,{children:L.jsxs(Q1,{children:[L.jsx(Z1,{children:"白頭翁 (Chinese bulbul)"}),L.jsx(V1,{children:"又名白頭鶲。以果實、昆蟲為主食，無法消化小米、穀類。平均壽命約 8-10 年。"})]})}),L.jsx(K1,{children:L.jsxs($1,{children:[L.jsx(Of,{title:"外觀",text:"白頭翁體長約17到22公分，額至頭頂純白色富有光澤，兩眼上方至後枕白色，形成一白色枕環，具羽冠部有一白斑，此白環與白斑在黑色的頭部均為白色，老鳥的枕羽(後頭部)更潔白，所以又叫「白頭翁」。"}),L.jsx(Of,{title:"棲地",text:"白頭翁和麻雀、綠繡眼合稱「都市三寶」，常棲群出現在平原區濕木叢、丘陵樹林地帶，以及校園、公園、庭院、行道樹的各種高喬木的電線與樹上。"}),L.jsx(Of,{title:"食性",text:"以果樹的漿果和種子為主食，並時常飛入果園偷吃果實，過會吃嫩葉嫩芽，尤其是胡蝶蘭的嫩葉嫩芽等，偶爾吃昆蟲。"})]})})]})}const F1=()=>L.jsxs("div",{children:[L.jsx("h1",{children:"白頭翁的故事"}),L.jsx("p",{children:"這裡將展示白頭翁的故事內容..."})]}),P1=()=>L.jsxs("div",{children:[L.jsx("h1",{children:"白頭翁的美照"}),L.jsx("p",{children:"這裡將展示白頭翁的美麗照片..."})]}),I1=()=>L.jsxs("div",{children:[L.jsx("h1",{children:"白頭翁的危機"}),L.jsx("p",{children:"這裡將展示白頭翁的保育相關內容..."})]}),tb=()=>L.jsx(Lg,{children:L.jsxs(na,{path:"/",element:L.jsx(L1,{}),children:[L.jsx(na,{index:!0,element:L.jsx(p0,{})}),L.jsx(na,{path:"characteristics",element:L.jsx(p0,{})}),L.jsx(na,{path:"story",element:L.jsx(F1,{})}),L.jsx(na,{path:"gallery",element:L.jsx(P1,{})}),L.jsx(na,{path:"conservation",element:L.jsx(I1,{})})]})});function eb(){return L.jsx(o1,{basename:"/trident",children:L.jsx(tb,{})})}Xv.createRoot(document.getElementById("root")).render(L.jsx(U.StrictMode,{children:L.jsxs(Gp,{theme:Vp,children:[L.jsx(Z0,{}),L.jsx(eb,{})]})}));
+`,Of=({title:n,text:c})=>L.jsxs(k1,{children:[L.jsx(W1,{children:n}),L.jsx(F1,{children:c})]});function p0(){return L.jsxs(X1,{children:[L.jsx(Q1,{children:L.jsxs(Z1,{children:[L.jsx(V1,{children:"白頭翁 (Chinese bulbul)"}),L.jsx(K1,{children:"又名白頭鶲。以果實、昆蟲為主食，無法消化小米、穀類。平均壽命約 8-10 年。"})]})}),L.jsx($1,{children:L.jsxs(J1,{children:[L.jsx(Of,{title:"外觀",text:"白頭翁體長約17到22公分，額至頭頂純白色富有光澤，兩眼上方至後枕白色，形成一白色枕環，具羽冠部有一白斑，此白環與白斑在黑色的頭部均為白色，老鳥的枕羽(後頭部)更潔白，所以又叫「白頭翁」。"}),L.jsx(Of,{title:"棲地",text:"白頭翁和麻雀、綠繡眼合稱「都市三寶」，常棲群出現在平原區濕木叢、丘陵樹林地帶，以及校園、公園、庭院、行道樹的各種高喬木的電線與樹上。"}),L.jsx(Of,{title:"食性",text:"以果樹的漿果和種子為主食，並時常飛入果園偷吃果實，過會吃嫩葉嫩芽，尤其是胡蝶蘭的嫩葉嫩芽等，偶爾吃昆蟲。"})]})})]})}const P1=()=>L.jsxs("div",{children:[L.jsx("h1",{children:"白頭翁的故事"}),L.jsx("p",{children:"這裡將展示白頭翁的故事內容..."})]}),I1=()=>L.jsxs("div",{children:[L.jsx("h1",{children:"白頭翁的美照"}),L.jsx("p",{children:"這裡將展示白頭翁的美麗照片..."})]}),tb=()=>L.jsxs("div",{children:[L.jsx("h1",{children:"白頭翁的危機"}),L.jsx("p",{children:"這裡將展示白頭翁的保育相關內容..."})]}),eb=()=>L.jsx(Lg,{children:L.jsxs(na,{path:"/",element:L.jsx(L1,{}),children:[L.jsx(na,{index:!0,element:L.jsx(p0,{})}),L.jsx(na,{path:"characteristics",element:L.jsx(p0,{})}),L.jsx(na,{path:"story",element:L.jsx(P1,{})}),L.jsx(na,{path:"gallery",element:L.jsx(I1,{})}),L.jsx(na,{path:"conservation",element:L.jsx(tb,{})})]})});function lb(){return L.jsx(o1,{basename:"/trident",children:L.jsx(eb,{})})}Xv.createRoot(document.getElementById("root")).render(L.jsx(U.StrictMode,{children:L.jsxs(Gp,{theme:Vp,children:[L.jsx(Z0,{}),L.jsx(lb,{})]})}));
