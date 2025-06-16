@@ -1,9 +1,13 @@
 import { LogoContainer, Bird } from './styled';
 
-const Logo = () => {
+type LogoProps = {
+  size?: number;
+};
+
+const Logo = ({ size }: LogoProps) => {
   return (
-    <LogoContainer>
-      <Bird>
+    <LogoContainer size={size}>
+      <Bird size={size ? size * 0.6 : undefined}>
         <span className="head" />
         <span className="eye" />
         <span className="beak" />

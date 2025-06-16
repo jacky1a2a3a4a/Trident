@@ -19,8 +19,8 @@ export const SidebarContainer = styled.aside`
   }
 `;
 
-// 文字容器
-export const Logo = styled.div`
+// logo容器
+export const LogoWrapper = styled.div`
   padding: ${({ theme }) => theme.spacing.xl};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
   text-align: center;
@@ -33,3 +33,9 @@ export const LogoText = styled.h1`
   font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
 `;
 
+// 固定logo容器
+export const FixedWrapper = styled.div`
+  position: fixed;
+  top: 35px;
+  left: 300px;
+`;

@@ -1,12 +1,21 @@
-import { SidebarContainer, Logo, LogoText } from './styled';
+import {
+  SidebarContainer,
+  LogoWrapper,
+  LogoText,
+  FixedWrapper,
+} from './styled';
 import NavLinks from '../NavLinks';
+import Logo from 'src/components/Logo';
 
 const DesktopSidebar = () => {
   return (
     <SidebarContainer className="desktop-sidebar">
-      <Logo>
+      <LogoWrapper>
         <LogoText>白頭翁不吃小米</LogoText>
-      </Logo>
+        <FixedWrapper>
+          <Logo size={90} />
+        </FixedWrapper>
+      </LogoWrapper>
       <NavLinks />
     </SidebarContainer>
   );

@@ -1,39 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
-
-const GlobalStyle = createGlobalStyle`
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  /* 自定義滾動條樣式 */
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: ${({ theme }) => theme.colors.background.main};
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.colors.primary.main};
-    border-radius: 4px;
-    transition: all 0.2s ease;
-
-    &:hover {
-      background: ${({ theme }) => theme.colors.primary.hover};
-    }
-  }
-
-  /* 隱藏滾動條按鈕 */
-  ::-webkit-scrollbar-button {
-    display: none;
-  }
-`;
+import styled from 'styled-components';
 
 //元件容器
 export const Container = styled.div`
@@ -44,9 +9,19 @@ export const Container = styled.div`
   position: relative;
 `;
 
+// 側邊欄容器
+export const SidebarWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+`;
+
 export const Main = styled.main`
   background-color: ${({ theme }) => theme.colors.background.main};
   position: relative;
+  z-index: 999;
   margin-left: 345px; // 對應 Sidebar 的 min-width
   width: calc(100% - 345px); // 計算剩餘寬度
   height: 100vh;
@@ -62,5 +37,3 @@ export const Main = styled.main`
     padding-bottom: 20px; // 添加底部間距
   }
 `;
-
-export { GlobalStyle };

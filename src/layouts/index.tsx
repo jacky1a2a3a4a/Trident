@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Container, Main, GlobalStyle } from './styled';
+import { Container, Main, SidebarWrapper } from './styled';
+import GlobalStyle from 'src/styles/GlobalStyle';
 
 import Sidebar from 'src/components/Sidebar';
 
@@ -15,10 +16,12 @@ const Layout = () => {
     <>
       <GlobalStyle />
       <Container>
-        <Sidebar
-          isMobileMenuOpen={isMobileMenuOpen}
-          onToggleMobileMenu={toggleMobileMenu}
-        />
+        <SidebarWrapper>
+          <Sidebar
+            isMobileMenuOpen={isMobileMenuOpen}
+            onToggleMobileMenu={toggleMobileMenu}
+          />
+        </SidebarWrapper>
 
         <Main>
           <Outlet />
