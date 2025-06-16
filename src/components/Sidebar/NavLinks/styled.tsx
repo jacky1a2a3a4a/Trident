@@ -17,12 +17,12 @@ export const StyledNavLink = styled.a`
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary.hover};
-    border-bottom: 1px solid ${({ theme }) => theme.colors.primary.hover};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.primary.hover};
+    font-weight: bold;
   }
 
   &.active {
     color: ${({ theme }) => theme.colors.primary.hover};
-    border-bottom: 2px solid ${({ theme }) => theme.colors.primary.hover};
     font-weight: bold;
   }
 `;
