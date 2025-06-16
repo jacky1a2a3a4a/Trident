@@ -6,16 +6,17 @@ import {
 } from './styled';
 import NavLinks from '../NavLinks';
 import Logo from 'src/components/Logo';
-import { StyledNavLink } from '../NavLinks/styled';
+
+// 導入 NavLink
 import { NavLink } from 'react-router-dom';
 
 const DesktopSidebar = () => {
   return (
     <SidebarContainer className="desktop-sidebar">
       <LogoWrapper>
-        <StyledNavLink as={NavLink} to="/">
+        <NavLink to="/">
           <LogoText>白頭翁不吃小米</LogoText>
-        </StyledNavLink>
+        </NavLink>
         <FixedWrapper>
           <Logo size={90} />
         </FixedWrapper>
